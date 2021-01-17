@@ -1,0 +1,183 @@
+@use "../variables/variables";
+
+.nav {
+    background-color: variables.$white;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1030;
+    
+    @media screen and (min-width: 992px) {
+        background-color: variables.$transparent-color;
+        align-items: center;
+    }
+
+    &-navbar {
+        display: flex;
+        flex-wrap: nowrap;
+        width: 100%;
+    
+        &-logo {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-items: center;
+            height: 60px;
+
+            a {
+                color: variables.$yellow;
+            }
+        }
+    }
+
+
+    &-container {
+        align-items: flex-start;
+        display: flex;
+        flex-direction: row-reverse;
+        flex-grow: 1;
+
+        @media screen and (min-width: 992px) {
+            align-items: center;
+        }
+    }
+
+    &-list {
+        display: none;
+        flex-direction: column;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+
+        @media screen and (min-width: 992px) {
+            display: flex;
+            flex-direction: row;
+            width: auto;
+        }
+    }
+
+    &-item {
+        text-align: center;
+    }
+
+    &-link {
+        color: variables.$link-color;
+        display: block;
+        line-height: 1rem;
+        padding: 1rem;
+        text-decoration: none;
+
+        &:hover {
+            background: variables.$link-hover-background-color;
+            color: variables.$link-hover-color;
+        }
+    }
+
+    &-hamburger {
+
+        &-checkbox {
+            display: none;
+
+            &:checked+.nav-list {
+                display: flex;
+            }
+        }
+
+        &-label {
+            align-items: center;
+            cursor: pointer;
+            display: flex;
+            flex-wrap: wrap;
+            height: 1.5rem;
+            padding: 0.75rem;
+            width: 1.5rem;
+
+            @media screen and (min-width: 992px) {
+                display: none;
+            }
+        }
+
+        &-title {
+            display: inline;
+
+            @media screen and (min-width: 992px) {
+                display: none;
+            }
+        }
+
+        &-line {
+            background: variables.$link-color;
+            display: block;
+            height: 2px;
+            width: 1.5rem;
+        }
+
+    }
+
+}
+
+// .navbar-scroll {
+//     background-color: #fff;
+//     transition: 0.3s;
+// }
+
+// .navbar-brand {
+//     color: #fdcc52;
+//     font-weight: 200;
+// }
+
+// .navbar-brand-scroll {
+//     color: #232428;
+//     font-weight: 200;
+// }
+
+// .navbar-brand:hover {
+//     color: #fff;
+// }
+
+// .nav-custom {
+//     color: #cccecd;
+//     font-size: .75rem;
+//     letter-spacing: .1rem;
+//     text-transform: uppercase;
+// }
+
+// .nav-custom-scroll {
+//     color: #232428;
+// }
+
+// a.nav-link:hover {
+//     color: #fff;
+// }
+
+// a.nav-link:focus {
+//     color: #fdcc52;
+// }
+
+// .navbar-toggler {
+//     border: 1px solid #232428;
+// }
+
+// .custom-toggler .navbar-toggler-icon {
+//     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+//     width: 1rem;
+// }
+
+// @media (max-width: 768px) {
+//     .navbar {
+//         background-color: #fff;
+//     }
+
+//     .navbar-brand,
+//     .nav-custom {
+//         color: #232428;
+//     }
+
+//     .navbar-brand:hover,
+//     .nav-custom:hover {
+//         color: #fdcc52;
+//     }
+// }
