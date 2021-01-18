@@ -93,7 +93,7 @@ a {
 
 .btn {
     background-color: variables.$transparent-color;
-    border: 1px solid #fff;
+    border: 1px solid variables.$white;
     border-radius: 1.5rem;
     padding: 1rem 2.5rem;
     color: variables.$white;
@@ -108,7 +108,7 @@ a {
 }
 
 .newage {
-    background-image: url("../img/bg-pattern.png"), linear-gradient(to right, #DC2430, #7B4397);
+    background-image: url("../img/bg-pattern.png"), linear-gradient(to right, variables.$red, variables.$purple);
     background-repeat: repeat;
 }
 

@@ -1,9 +1,9 @@
-const navbar = document.querySelector('.navbar');
-const navbarBrand = navbar.querySelector('.navbar-brand');
-const navLink = Array.from(navbar.querySelectorAll('.nav-custom'));
-const navDownload = navbar.querySelector('.download');
-const navFeatures = navbar.querySelector('.features');
-const navContact = navbar.querySelector('.contact');
+const nav = document.querySelector('.nav');
+const navbarBrand = nav.querySelector('.nav-navbar-brand');
+const navLink = Array.from(nav.querySelectorAll('.nav-link'));
+const navDownload = nav.querySelector('.download');
+const navFeatures = nav.querySelector('.features');
+const navContact = nav.querySelector('.contact');
 
 
 navDownload.addEventListener('click', () => {
@@ -29,14 +29,13 @@ window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
   if (document.body.scrollTop > 56 || document.documentElement.scrollTop > 56) {
-    navbar.classList.add('navbar-scroll');
-    navbarBrand.classList.add('navbar-brand-scroll');
-    navLink.map(item => item.classList.add('nav-custom-scroll'));
+    nav.classList.add('nav-scroll');
+    navbarBrand.classList.add('nav-navbar-brand-scroll');
+    navLink.map(item => item.classList.add('nav-link-scroll'));
   } else {
-    navbar.classList.remove('navbar-scroll');
-    navbarBrand.classList.remove('navbar-brand-scroll');
-    navLink.map(item => item.classList.remove('nav-custom-scroll'));
+    nav.classList.remove('nav-scroll');
+    navbarBrand.classList.remove('nav-navbar-brand-scroll');
+    navLink.map(item => item.classList.remove('nav-link-scroll'));
   }
 }
 
-$('[data-toggle="tooltip"]').tooltip()
